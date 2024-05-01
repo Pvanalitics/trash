@@ -1,0 +1,12 @@
+[Unit]
+Description=My Python Services
+After=network.target
+
+[Service]
+ExecStart=/home/cardsys/card/temp/bin/activate /home/cardsys/card/pyscard/CardSystem/bot.py & /home/cardsys/card/temp/bin/activate /home/cardsys/card/pyscard/CardSystem/crdstm.py
+WorkingDirectory=/home/cardsys/card/temp/bin/activate /home/cardsys/card/pyscard/CardSystem/
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
